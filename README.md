@@ -25,7 +25,7 @@ The core image processing functionality is handled by the
 
 - on the fly image thumbnail generation
 - filesystem cache
-- URLs are [Thumbor](https://github.com/thumbor/thumbor) compliant
+- URLs are [Thumbor](https://github.com/thumbor/thumbor) compatible
 - service access can be restricted to avoid abuse
 - Docker ready
 - easy to set up
@@ -39,14 +39,22 @@ The core image processing functionality is handled by the
 
 ## Installation
 
-- clone this project
-- ```npm install```
+
+```
+git clone git@github.com:chrisben/image-thumb.git && cd image-thumb
+```
+
+```
+npm install
+```
 
 ## Usage
 
 ### Running the server
 
-```node index.js```
+```
+node index.js
+```
 
 This will run a local server on: http://127.0.0.1:8081/
 
@@ -54,13 +62,16 @@ You can change the port number using the `SERVER_PORT` environment variable
 (see _Options_ below).
 
 Alternatively you can run the server using gulp:
-```./gulp serve```
+
+```
+./gulp serve
+```
 
 ### Generating thumbnails
 
 To create a thumbnail image:
 
-```http://127.0.0.1:8081/[HMAC/]WIDTHxHEIGHT/[HALIGN/VALIGN/]IMAGE_URL```
+`http://127.0.0.1:8081/[HMAC/]WIDTHxHEIGHT/[HALIGN/VALIGN/]IMAGE_URL`
 
 - HMAC: security token
 - WIDTH: new width in pixels
@@ -85,7 +96,7 @@ to keep the original aspect ratio. For instance:
 
 Options and their defaults are set in the services/options.js file.
 These options can be overridden via environment variables.
-For instance you can run: ```LOG_LEVEL=0 node index.js``` to start the server
+For instance you can run: `LOG_LEVEL=0 node index.js` to start the server
 with logging disabled.
 
 ### Security
@@ -111,23 +122,21 @@ The command line tool `command/hmac.js` is provided to generate tokens.
 
 Let's say I want to use the 'mytest' security key like this:
 
-`SECURITY_KEY=mytest node index.js`
+```
+SECURITY_KEY=mytest node index.js
+```
 
-From the given thumbnail URL:
+From the given thumbnail URL: `http://127.0.0.1:8081/300x100/https://www.google.fr/images/logo.png`
 
-`http://127.0.0.1:8081/300x100/https://www.google.fr/images/logo.png`
-
-We extract the path:
-
-`/300x100/https://www.google.fr/images/logo.png`
+We extract the path: `/300x100/https://www.google.fr/images/logo.png`
 
 Let's generate the security token (HMAC):
 
-`node command/hmac.js mytest /300x100/https://www.google.fr/images/logo.png`
+```
+node command/hmac.js mytest /300x100/https://www.google.fr/images/logo.png
+```
 
-We get the following security token:
-
-`4a79a53213c97c615e4ef50e856dd7797c9dbdb9`
+We get the following security token: `4a79a53213c97c615e4ef50e856dd7797c9dbdb9`
 
 Now the thumbnail image can be accessed using the following URL:
 
@@ -159,11 +168,15 @@ is not downloaded again and instead loaded directly from the filesystem cache.
 
 To build a docker container running the server:
 
-`docker build .`
+```
+docker build .
+```
 
 To run it:
 
-`docker run -p 8081:8081 DOCKER_IMAGE_ID`
+```
+docker run -p 8081:8081 DOCKER_IMAGE_ID
+```
 
 ## TODO
 
