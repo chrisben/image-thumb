@@ -1,0 +1,31 @@
+{
+  "name": "image-thumb",
+  "version": "1.0.0",
+  "description": "Image thumbnail generator server",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chrisben/image-thumb.git"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "jssha": "^2.0.1",
+    "lwip": "0.0.8",
+    "request": "^2.65.0"
+  },
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.3"
+  },
+  "scripts": {
+    "lint": "jshint --exclude ./node_modules .",
+    "test": "mocha"
+  },
+  "author": "Christophe Benoit <christophe.benoit@gmail.com>",
+  "license": "MIT"
+}
