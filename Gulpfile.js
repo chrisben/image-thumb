@@ -35,7 +35,7 @@ gulp.task('watch', function() {
     gulp.watch(['./index.js', './routes/*.js', './services/*.js'], ['serve']);
 });
 
-gulp.task('default', ['lint', 'serve', 'watch']);
+gulp.task('default', gulp.series('lint', 'serve', 'watch'));
 
 // clean up if an error goes unhandled.
 process.on('exit', function() {
