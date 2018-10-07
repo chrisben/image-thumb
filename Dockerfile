@@ -16,7 +16,7 @@ RUN \
         curl \
         build-essential
 
-RUN curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
+RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash -
 
 RUN \
     apt-get update -q && \
