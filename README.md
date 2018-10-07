@@ -19,7 +19,7 @@ cache keeps a copy of the downloaded file to avoid downloading them multiple
 times.
 
 The core image processing functionality is handled by the
-[EyalAr/lwip](https://github.com/EyalAr/lwip) NodeJS library.
+[lovell/sharp](https://github.com/lovell/sharp) NodeJS library.
 
 ## Main features
 
@@ -84,13 +84,13 @@ To create a thumbnail image:
 
 For instance:
 
-`http://127.0.0.1:8081/100x150/https://fr.animalblog.co/wp-content/uploads/2013/08/chat_peur1.jpg`
+`http://127.0.0.1:8081/100x150/http://www.dynamictic.info/wp-content/uploads/2014/01/chat-peur.jpg`
 
-`http://127.0.0.1:8081/300x200/right/middle/https://fr.animalblog.co/wp-content/uploads/2013/08/chat_peur1.jpg`
+`http://127.0.0.1:8081/300x200/right/middle/http://www.dynamictic.info/wp-content/uploads/2014/01/chat-peur.jpg`
 
 You can omit one of the width/height properties by setting a `0` value in order
 to keep the original aspect ratio. For instance:
-`http://127.0.0.1:8081/0x200/center/middle/https://fr.animalblog.co/wp-content/uploads/2013/08/chat_peur1.jpg`
+`http://127.0.0.1:8081/0x200/center/middle/http://www.dynamictic.info/wp-content/uploads/2014/01/chat-peur.jpg`
 
 ### Options
 

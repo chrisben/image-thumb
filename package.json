@@ -8,21 +8,21 @@
     "url": "git@github.com:chrisben/image-thumb.git"
   },
   "dependencies": {
-    "express": "^4.13.3",
-    "fs": "0.0.2",
+    "express": "^4.16.3",
     "jssha": "^2.0.1",
-    "lwip": "0.0.8",
-    "request": "^2.65.0"
+    "request": "^2.88.0",
+    "sharp": "^0.21.0"
   },
   "devDependencies": {
     "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "gulp-jshint": "^1.11.2",
+    "gulp": "^4.0.0",
+    "gulp-jshint": "^2.1.0",
     "gulp-util": "^3.0.7",
     "jshint": "^2.8.0",
-    "mocha": "^2.3.3"
+    "mocha": "^5.2.0"
   },
   "scripts": {
+    "start": "node index.js",
     "lint": "jshint --exclude ./node_modules .",
     "test": "mocha"
   },
