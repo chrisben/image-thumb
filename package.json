@@ -8,7 +8,7 @@
     "url": "git@github.com:chrisben/image-thumb.git"
   },
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "jssha": "^2.3.1",
     "request": "^2.88.0",
     "sharp": "^0.30.5"
