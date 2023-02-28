@@ -19,7 +19,7 @@
     "gulp-jshint": "^2.1.0",
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.6",
-    "mocha": "^5.2.0"
+    "mocha": "^10.2.0"
   },
   "scripts": {
     "start": "node index.js",
